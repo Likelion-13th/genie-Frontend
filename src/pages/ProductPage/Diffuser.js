@@ -8,5 +8,4 @@ const Diffuser = () => {
     )
 }
 
-
 export default Diffuser;
