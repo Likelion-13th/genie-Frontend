@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'KaiseiDecol-Regular';
+    src: url("../../public/font/KaiseiDecol-Regular.ttf") format("truetype");
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #E7EFF5;
+    padding: 15px 32px;
+    gap: 20px;
+    top: 0;
+    left: 0;
+}
+
+.header-section-right {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.header-title {
+    font-size: 1.2rem;
+    font-family: 'KaiseiDecol-Regular';
+}
+
+.header-title {
+    font-family: 'NanumMyeongjo';
+}
+
+.header-section-right {
+    font-size: 1.0rem;
+    display: flex;
+    gap: 16px;
+    font-family: 'NanumMyeongjo';
+}
+
+.header-section-right {
+    color: #B8BAC6;
+}
+

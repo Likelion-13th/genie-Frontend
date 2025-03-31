@@ -1,5 +1,5 @@
 import React from 'react';
-const New = () => {
+const Brands = () => {
     return(
         <div>
             <h1>야 너두 사장될 수 있어!</h1>
@@ -8,4 +8,5 @@ const New = () => {
     )
 }
 
-export default New;
+
+export default Brands;
