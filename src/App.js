@@ -11,7 +11,7 @@ import New from "./pages/ProductPage/New";
 import Brands from './pages/ProductPage/Brands';
 import Sunglasses from './pages/ProductPage/Sunglasses';
 import Glasses from './pages/ProductPage/Sunglasses';
-
+import LIKELION from "./pages/Home/Home";
 
 
 function App() {
@@ -26,7 +26,8 @@ function App() {
         <Route path="/perfume" element={<Perfume />} />
         <Route path="/brands" element={<Brands />} /> 
         <Route path="/sunglasses" element={<Sunglasses />} />
-        <Route path="/glasses" element={<Glasses />} />       
+        <Route path="/glasses" element={<Glasses />} />
+        <Route path="/home" element={<LIKELION />} />      
       </Routes>
       <Footer />
     </Router>

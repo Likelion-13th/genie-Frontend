@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'KaiseiDecol-Regular';
+    font-family: "KaiseiDecol-Regular";
     src: url("../../public/font/KaiseiDecol-Regular.ttf") format("truetype");
 }
 
@@ -12,6 +12,12 @@
     gap: 20px;
     top: 0;
     left: 0;
+    font-family: "KaiseiDecol-Regular";
+}
+
+
+.mypage-active {
+    background-color: #6c7982;
 }
 
 .header-section-right {
@@ -22,35 +28,40 @@
 
 .header-title {
     font-size: 1.2rem;
-    font-family: 'KaiseiDecol-Regular';
 }
 
-.header-title {
-    font-family: 'NanumMyeongjo';
-}
 
 .header-section-right {
     font-size: 1.0rem;
     display: flex;
     gap: 16px;
-    font-family: 'NanumMyeongjo';
 }
 
 .header-section-right {
     color: #3b426e;
 }
 
-.header-active {
-    color: #947ac8;
-}
 
 .header-section-right a {
     color: black; 
     margin: 0 15px;
   }
   
-  .header-section-right a.active {
+.header-section-right a.active {
+    color: #16823c; 
+    font-weight: bold; 
+}
+  
+.header-title a {
+    color: black; 
+    margin: 0 15px;
+}
+
+.header-title a.active {
     color: #16823c; 
     font-weight: bold; 
   }
-  
+
+.mypage-active {
+    background-color: lightblue ;
+}

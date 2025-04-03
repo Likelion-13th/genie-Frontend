@@ -1,14 +1,16 @@
 @font-face {
-    font-family: 'KaiseiDecol-Regular';
-    src: url("../../public/font/KaiseiDecol-Regular.ttf") foramt("truetype");
+    font-family: "KaiseiDecol-Regular";
+    src: url("../../public/font/KaiseiDecol-Regular.ttf") format("truetype");
 }
+
 
 .footer-container {
     display: flex;
     flex-direction: column;
-    background-color: #E7EFF5;
+    background-color: #b9cfe1;
     padding: 52px 72px;
     gap: 36px;
+    font-family: "KaiseiDecol-Regular";
 }
 
 .footer-section {
@@ -19,7 +21,6 @@
 
 .footer-title {
     font-size: 1.2rem;
-    font-family: 'KaiseiDecol-Regular';
 }
 
 .info-text-row {
@@ -27,14 +28,10 @@
     gap: 16px;
 }
 
-.footer-subtitle {
-    font-family: 'NanumMyeongjo'
-}
 
 .info-text-wrapper {
     display:flex;
     gap: 16px;
-    font-family: 'NamunMyeonjo';
 }
 
 .info-text-1 {
