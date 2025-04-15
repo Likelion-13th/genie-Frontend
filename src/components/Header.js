@@ -17,7 +17,7 @@ const Header = () => {
 
         <div className="header-section-left">
           <div className="header-title">
-            <Link to="home" className={currentPage === "/home" ? "active" : ""}>
+            <Link to="/home" className={currentPage === "/home" ? "active" : ""}>
               LIKELION
             </Link>
           </div>

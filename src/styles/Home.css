@@ -34,7 +34,8 @@
 }
 
 .menu-sunglasses,
-.menu-brands {
+.menu-brands,
+.menu-glasses {
     width: 100%;
     display: block;
 }
@@ -53,9 +54,14 @@
 }
 
 .text-brands {
-    right: 28px;
+    left: 28px;
     bottom: 16px;
     
+}
+
+.text-glasses {
+    left: 28px;
+    bottom: 16px;
 }
 
 /* info */

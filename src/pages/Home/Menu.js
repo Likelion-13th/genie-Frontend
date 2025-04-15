@@ -20,6 +20,14 @@ const Menu = () => {
         ></img>
         <div className="text-overlay text-brands">Brands</div>
       </Link>
+      <Link to="/glasses" className="menu-section">
+        <img
+          src={`${process.env.PUBLIC_URL}/img/diffuser1212.jpg`}
+          alt="glasses"
+          className="menu-glasses"
+        ></img>
+        <div className="text-overlay text-glasses">Glasses</div>
+      </Link>
     </div>
   );
 };
