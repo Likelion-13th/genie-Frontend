@@ -12,12 +12,13 @@ import Brands from './pages/ProductPage/Brands';
 import Sunglasses from './pages/ProductPage/Sunglasses';
 import Glasses from './pages/ProductPage/Sunglasses';
 import LIKELION from "./pages/Home/Home";
-
+import ToolBar from './components/ToolBar';
 
 function App() {
   return (
     <Router>
       <Header />
+      <ToolBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mypage" element={<Mypage />} />

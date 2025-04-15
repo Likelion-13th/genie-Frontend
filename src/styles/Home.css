@@ -1,0 +1,117 @@
+@font-face {
+    font-family:'KaiseiDecol-Regular';
+    src:url("../../public/font/KaiseiDecol-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:'NanumMyeongjo';
+    src: url("../../public/font/NanumMyeongjo-Regular.ttf") format("truetype");
+}
+
+/* Home Base */
+.menu-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: "KaiseiDecol-Regular";
+}
+
+/* Menu */
+.menu-section {
+    width: 50%;
+    position: relative;
+}
+
+.menu-section::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+.menu-sunglasses,
+.menu-brands {
+    width: 100%;
+    display: block;
+}
+
+
+.text-overlay {
+    position: absolute;
+    color: black;
+    font-size: 48px;
+}
+
+.text-sunglasses {
+    left: 28px;
+    bottom: 16px;
+    
+}
+
+.text-brands {
+    right: 28px;
+    bottom: 16px;
+    
+}
+
+/* info */
+.info-container {
+    margin: 40px 80px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 100px ;
+}
+  
+.info-section {
+    align-items: flex-end;
+    width: 120%;
+    display: flex;
+}
+
+.info-image-back {
+    position: absolute;
+    margin-bottom: 70px;
+    margin-left: 10px;
+    width: 20%;
+    height: auto;
+    opacity: 0.3;
+}
+
+
+.info-image-front {
+    position: relative;
+    width: 60%;
+    height: auto;
+    z-index: 1;
+    margin-left: 70px;
+}
+
+.about-text {
+    font-size: 45px;
+    writing-mode: vertical-lr;
+    font-family:serif;
+}
+
+.info-section2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: center;
+    width: 500px;
+    padding-left: 40px;
+    white-space: nowrap;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.info-text {
+    font-size: 30px;
+}
+
+.info-text2 {
+    font-size: 20px;
+}
