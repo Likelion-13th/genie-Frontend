@@ -43,7 +43,7 @@
 
 .text-overlay {
     position: absolute;
-    color: black;
+    color: white;
     font-size: 48px;
 }
 
@@ -66,35 +66,32 @@
 
 /* info */
 .info-container {
-    margin: 40px 80px;
-    width: 60%;
     display: flex;
     justify-content: center;
     padding: 40px 100px ;
+    gap: 60px;
 }
   
 .info-section {
     align-items: flex-end;
-    width: 120%;
     display: flex;
 }
 
 .info-image-back {
     position: absolute;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     margin-left: 10px;
-    width: 20%;
-    height: auto;
     opacity: 0.3;
+    height: auto;
 }
 
 
 .info-image-front {
     position: relative;
-    width: 60%;
     height: auto;
     z-index: 1;
     margin-left: 70px;
+    margin-top: 60px;
 }
 
 .about-text {
@@ -111,7 +108,7 @@
     width: 500px;
     padding-left: 40px;
     white-space: nowrap;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: serif;
 }
 
 .info-text {
