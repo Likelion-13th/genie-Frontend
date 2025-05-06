@@ -22,9 +22,22 @@ const History = () => {
                     <tbody>
                         <tr>
                             <td>2025-01-01</td>
-                            <td>선글라스</td>
+                            <td>
+                                <div className='history-product-info'>
+                                    <div className='history-img'>
+                                        <img
+                                            src={`${process.env.PUBLIC_URL}/img/jennysun.jpg`}
+                                            alt="상품 이미지"
+                                        />
+                                    </div>
+                                    <div>
+                                        <div style={{ fontWeight: "bold" }}>제니가 쓰다 버린 선글라스</div>
+                                        <div style={{ fontSize: "14px", color: "#666" }}>제니의 보물창고</div>
+                                    </div>
+                                </div>
+                            </td>
                             <td>1</td>
-                            <td>2,000원</td>
+                            <td>2,000,000,000원</td>
                             <td>배송중</td>
                             <td>
                                 <div className='history-cancel'>
