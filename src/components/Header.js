@@ -33,7 +33,7 @@ const Header = () => {
             Sunglasses
           </Link>
           <Link to="/glasses" className={currentPage === "/glasses" ? "active" : ""}>
-            Glasses
+          glasses
           </Link>
           <Link to="/mypage" className={currentPage === "/mypage" ? "active" : ""}>
             Mypage
