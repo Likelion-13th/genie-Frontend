@@ -72,7 +72,7 @@ const Brands = () => {
         },
         {
             id: 9,
-            name: "perfume9",
+            name: "perfume99",
             brand: "brand",
             price: 90000,
             imagePath: "/img/perfume_9.png",
