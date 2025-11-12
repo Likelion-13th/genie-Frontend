@@ -10,7 +10,7 @@ import Perfume from "./pages/ProductPage/Perfume";
 import New from "./pages/ProductPage/New";
 import Brands from './pages/ProductPage/Brands';
 import Sunglasses from './pages/ProductPage/Sunglasses';
-import Glasses from './pages/ProductPage/Sunglasses';
+import Glasses from './pages/ProductPage/Glasses';
 import LIKELION from "./pages/Home/Home";
 import ToolBar from './components/ToolBar';
 import { CookiesProvider } from 'react-cookie';
