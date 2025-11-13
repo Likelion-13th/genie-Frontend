@@ -1,1 +1,7 @@
-/*    /index.html   200
+/users/* http://sajang-dev-env.eba-pfhm69kf.ap-northeast-2.elasticbeanstalk.com/users/:splat 200
+/orders/* http://sajang-dev-env.eba-pfhm69kf.ap-northeast-2.elasticbeanstalk.com/orders/:splat 200
+/token/* http://sajang-dev-env.eba-pfhm69kf.ap-northeast-2.elasticbeanstalk.com/token/:splat 200
+/api/* http://sajang-dev-env.eba-pfhm69kf.ap-northeast-2.elasticbeanstalk.com/api/:splat 200
+/categories/* http://sajang-dev-env.eba-pfhm69kf.ap-northeast-2.elasticbeanstalk.com/categories/:splat 200
+
+/* /index.html 200
