@@ -1,9 +1,9 @@
 import React from 'react';
-const History = () => {
-    const onCancel = () => {
-        //API호출출
-        alert("취소")
-    }
+
+const History = ({ historyData, onCancel }) => {
+
+    const safeHistoryData = Array.isArray(historyData) ? historyData : [];
+    
     return(
         <div className='history-container-wrap'>
             <div className='history-title'>나의 쇼핑 내역</div>
@@ -20,39 +20,45 @@ const History = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>2025-01-01</td>
-                            <td>
-                                <div className='history-product-info'>
-                                    <div className='history-img'>
-                                        <img
-                                            src={`${process.env.PUBLIC_URL}/img/jennysun.jpg`}
-                                            alt="상품 이미지"
-                                        />
-                                    </div>
-                                    <div>
-                                        <div style={{ fontWeight: "bold" }}>제니가 쓰다 버린 선글라스</div>
-                                        <div style={{ fontSize: "14px", color: "#666" }}>제니의 보물창고</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>1</td>
-                            <td>2,000,000,000원</td>
-                            <td>배송중</td>
-                            <td>
-                                <div className='history-cancel'>
-                                    <div className='history-cancel-button'
-                                    onClick={onCancel}
-                                >취소</div>
-                                </div>
-                            </td>
-                        </tr>
+                        {safeHistoryData.map((order) => (
+                            <tr key={order.orderId}> 
+                                
+                                <td>
+                                    {order.createdAt ? order.createdAt.substring(0, 10) : '-'}
+                                </td>
+
+                                <td>
+                                    {order.item_name}
+                                </td>
+
+                                <td>{order.quantity}개</td>
+
+                                <td>
+                                    {(order.totalPrice || 0).toLocaleString()}원
+                                </td>
+
+                                <td>{order.status}</td>
+
+                                <td>
+                                    {order.status !== 'CANCEL' && (
+                                        <div className='history-cancel'>
+                                            <div 
+                                                className='history-cancel-button'
+                                                onClick={() => onCancel(order.orderId)} 
+                                                style={{ cursor: 'pointer' }} 
+                                            >
+                                                취소
+                                            </div>
+                                        </div>
+                                    )}
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
         </div>
     )
 }
-
 
 export default History;

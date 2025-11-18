@@ -3,13 +3,6 @@ import "../styles/ToolBar.css";
 import axios from 'axios';
 import { useCookies } from "react-cookie";
 
-const MoveToTop =() => {
-    window.scrollTo({ top: 0, behavior: "smooth"});
-};
-
-const MoveToBottom = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth"});
-};
 
 
 const handleLoginRedirect = () => {
@@ -19,14 +12,14 @@ const handleLoginRedirect = () => {
         :"https://genie-likelion.netlify.app";
 
     const oauthUrl = 
-    "http://Sajang-dev-env.eba-pfhm69kf.ap-northeast-2.elasticbeanstalk.com/oauth2/start/kakao" +
+    "http://sajang-dev-env.eba-pfhm69kf.ap-northeast-2.elasticbeanstalk.com/oauth2/start/kakao" +
     `?redirect_uri=${encodeURIComponent(redirectUrl)}`;
 
     window.location.href = oauthUrl;
 };
 
 
-const ToolBar = ({isLogin, onLoginChange }) => {
+const ToolBar = ({ isLogin, onLoginChange }) => {
 
     const [cookies, removeCookie] = useCookies(["accessToken"]);
 
@@ -46,6 +39,14 @@ const ToolBar = ({isLogin, onLoginChange }) => {
         });
 
     };
+
+  const MoveToTop =() => {
+    window.scrollTo({ top: 0, behavior: "smooth"});
+  };
+
+  const MoveToBottom = () => {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth"});
+  };
 
     return (
         <div className= "toolbar-container">
