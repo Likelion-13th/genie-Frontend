@@ -49,9 +49,9 @@ const Banner =() => {
     };
 
 const images =[
-    `${process.env.PUBLIC_URL}/img/banner_background_1.jpg`,
-    `${process.env.PUBLIC_URL}/img/banner_background_2.jpg`,
-    `${process.env.PUBLIC_URL}/img/banner_background_3.jpg`,
+    `${process.env.PUBLIC_URL}/img/sun6.jpg`,
+    `${process.env.PUBLIC_URL}/img/sun7.jpg`,
+    `${process.env.PUBLIC_URL}/img/glas3.jpg`,
 
 ];
 

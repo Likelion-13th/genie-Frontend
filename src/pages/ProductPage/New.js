@@ -63,7 +63,7 @@ const New = () => {
 
     return(
         <div>
-            <Banner title="New" imagePath={"/banner_perfume.png"} />
+            <Banner title="New" imagePath={"/new1.jpg"} />
             <div className='product-container'>
                 <div className='product-grid'>
                     {products.map((product) => (

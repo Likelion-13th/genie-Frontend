@@ -52,7 +52,7 @@
   }
   
 .header-section-right a.active {
-    color: #16823c; 
+    color: #060c32; 
     font-weight: bold; 
 }
   
@@ -62,10 +62,10 @@
 }
 
 .header-title a.active {
-    color: #16823c; 
+    color: #3b426e; 
     font-weight: bold; 
   }
 
 .mypage-active {
-    background-color: lightblue ;
+    background-color: rgb(10, 52, 65) ;
 }

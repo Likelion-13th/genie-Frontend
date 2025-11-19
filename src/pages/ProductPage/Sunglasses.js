@@ -56,7 +56,7 @@ const Sunglasses = () => {
 
     return(
         <div> 
-            <Banner title="Sunglasses" imagePath={"/banner_perfume.png"} />
+            <Banner title="Sunglasses" imagePath={"/sunglasses12.jpg"} />
             <div className='product-container'>
                 <div className='product-grid'>
                     {currentProducts.map((product) => (
