@@ -36,8 +36,7 @@ const New = () => {
 
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const currentProducts = products.slice(startIndex, endIndex);
-    
+    const currentProducts = (products || []).slice(startIndex, endIndex);    
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -53,7 +52,7 @@ const New = () => {
             },
         })
         .then((response) => {
-            setProducts(response.data.result);
+            setProducts(response.data.result || []);
         })
         .catch((err) => {
             console.log("CATEGORY 요청 실패", err);
