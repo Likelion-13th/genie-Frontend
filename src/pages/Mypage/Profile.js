@@ -12,7 +12,7 @@ const Profile = ({ profileData }) => {
                         </span>
                     님
                     </div> {/*초록박스스*/}
-                <div className='profile-membership'> [VVIP] 회원원</div>{/*초록록박스스*/}
+                <div className='profile-membership'> [VVIP] 회원</div>{/*초록록박스스*/}
             </div>
             <div className="profile-section"> {/*노란란스스*/}
                 <div className='profile-stat-label'>총 결제 금액</div> {/*초록박스스*/}
