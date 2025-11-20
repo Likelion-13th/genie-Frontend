@@ -46,7 +46,7 @@ const New = () => {
 
     useEffect(() => {
         axios
-        .get("/categories/1/items", {
+        .get("http://3.34.178.227:8080/categories/1/items", {
             headers: {
                 accept: "*/*",
             },
