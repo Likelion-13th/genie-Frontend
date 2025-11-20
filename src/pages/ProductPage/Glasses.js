@@ -62,7 +62,7 @@ const Glasses = () => {
         return(
         <div>
             <div>
-                <Banner title="New" imagePath={"/g7.jpg"} />
+                <Banner title="Glasses" imagePath={"/g7.jpg"} />
                 <div className='product-container'>
                     <div className='product-grid'>
                         {currentProducts.map((product) => (
