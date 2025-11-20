@@ -32,12 +32,11 @@ const Brands = () => {
     
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5;
-    const totalPages = Math.ceil(products.length / itemsPerPage);
+    const totalPages = Math.ceil((products?.length ?? 0) / itemsPerPage);
 
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const currentProducts = products.slice(startIndex, endIndex);
-    
+    const currentProducts = (products || []).slice(startIndex, endIndex);    
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -53,7 +52,7 @@ const Brands = () => {
             },
         })
         .then((response) => {
-            setProducts(response.data.result);
+            setProducts(response.data.result || []);
         })
         .catch((err) => {
             console.log("CATEGORY 요청 실패", err);
