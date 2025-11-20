@@ -35,6 +35,20 @@ const Mypage = () => {
             .catch((err)=>{
                 console.log("API 요청 실패:", err);
             });
+             axios
+            .get("/orders", {
+                headers: {
+                    accept: "*/*",
+                    Authorization: `Bearer ${cookies.accessToken}`,
+                },
+            })
+            .then((response) => {
+                setHistoryData(response.data.result);
+                console.log("주문 내역 조회 성공:", response);
+            })
+            .catch((err)=>{
+                console.log("API 요청 실패:", err);
+            });
     }, [cookies.accessToken]);
 
 
@@ -93,25 +107,6 @@ const Mypage = () => {
                 alert("주소 저장 중 오류가 발생했습니다.");
         }
     }
-
-   
-
-    useEffect(() => {
-        axios
-            .get("/orders", {
-                headers: {
-                    accept: "*/*",
-                    Authorization: `Bearer ${cookies.accessToken}`,
-                },
-            })
-            .then((response) => {
-                setHistoryData(response.data.result);
-                console.log("주문 내역 조회 성공:", response);
-            })
-            .catch((err)=>{
-                console.log("API 요청 실패:", err);
-            });
-    }, [cookies.accessToken]);
 
     return(
         <div className='page-container'>
