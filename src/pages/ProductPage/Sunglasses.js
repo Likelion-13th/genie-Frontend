@@ -7,6 +7,8 @@ import axios from 'axios';
 import { useCookies } from 'react-cookie';
 
 const Sunglasses = () => {
+   
+
     const [products, setProducts] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,24 +23,26 @@ const Sunglasses = () => {
         setIsModalOpen(true);
     };
 
-    const handleCloseModal = (product) => {
+    const handleCloseModal = () => {
         setSelectedProduct(null);
         setIsModalOpen(false);
     };
 
+
+    
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5;
     const totalPages = Math.ceil((products?.length ?? 0) / itemsPerPage);
 
-    
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const currentProducts = products.slice(startIndex, endIndex);
-        
-    
+    const currentProducts = (products || []).slice(startIndex, endIndex);    
+
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
+    
+
 
     useEffect(() => {
         axios
@@ -48,20 +52,21 @@ const Sunglasses = () => {
             },
         })
         .then((response) => {
-            setProducts(response.data.result);
+            setProducts(response.data.result || []);
         })
         .catch((err) => {
             console.log("CATEGORY 요청 실패", err);
         });
     }, []);
 
-    return(
-        <div> 
-            <Banner title="Sunglasses" imagePath={"/sunglasses12.jpg"} />
-            <div className='product-container'>
-                <div className='product-grid'>
-                    {currentProducts.map((product) => (
-                        <ProductCard 
+        return(
+        <div>
+            <div>
+                <Banner title="Sunglasses" imagePath={"/sunglasses12.jpg"} />
+                <div className='product-container'>
+                    <div className='product-grid'>
+                        {currentProducts.map((product) => (
+                            <ProductCard 
                             key={product.id}
                             product={{
                                 id: product.id,
@@ -72,39 +77,40 @@ const Sunglasses = () => {
                                 isNew: product.isNew,
                             }}
                             onClick={() => handleCardClick(product)} 
-                        />
-                    ))}
+                            />
+                        ))}
+                    </div>
+                </div>
+                {isModalOpen && (
+                    <PayModal product={selectedProduct} onClose={handleCloseModal}/>
+                )}
+                </div>
+                <div className="paging">
+                    {currentPage > 1 && (
+                        <button onClick={() => handlePageChange(currentPage - 1)}>
+                            prev
+                        </button>
+                    )}
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                        (pageNumber) => (
+                        <button
+                            key={pageNumber}
+                            onClick={() => handlePageChange(pageNumber)}
+                            className={`page-button ${currentPage === pageNumber ? "active" : ""}`}
+                        >
+                            {pageNumber}
+                        </button>
+                        )
+                    )}
+                    {currentPage < totalPages && (
+                        <button onClick={() => handlePageChange(currentPage + 1)}>
+                            Next
+                        </button>
+                    )}
                 </div>
             </div>
-            {isModalOpen && (
-                <PayModal product={selectedProduct} onClose={handleCloseModal}/>
-            )}
-            
-            <div className="paging">
-                {currentPage > 1 && (
-                    <button onClick={() => handlePageChange(currentPage - 1)}>
-                        prev
-                    </button>
-                )}
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                    (pageNumber) => (
-                    <button
-                        key={pageNumber}
-                        onClick={() => handlePageChange(pageNumber)}
-                        className={`page-button ${currentPage === pageNumber ? "active" : ""}`}
-                    >
-                        {pageNumber}
-                    </button>
-                    )
-                )}
-                {currentPage < totalPages && (
-                    <button onClick={() => handlePageChange(currentPage + 1)}>
-                        Next
-                    </button>
-                )}
-            </div>
-        </div>
     );
 };
+
 
 export default Sunglasses;
